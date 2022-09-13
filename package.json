@@ -25,13 +25,16 @@
   "homepage": "https://github.com/DuDoanJR10/NodeJS_blog#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "express-handlebars": "^6.0.6"
+    "express-handlebars": "^6.0.6",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.6.0",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.3",
     "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
     "sass": "^1.54.9"
   }
 }
