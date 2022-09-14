@@ -5,11 +5,11 @@ class CourseController {
     // [GET] /courses/:slug
     show(req, res, next) {
         Course.findOne({ slug: req.params.slug })
-        .lean()
-        .then(course => {
-            res.render('courses/show', { course })
-        })
-        .catch(next)
+            .lean()
+            .then(course => {
+                res.render('courses/show', { course })
+            })
+            .catch(next)
     }
 
     // [GET] /courses/create
@@ -42,6 +42,13 @@ class CourseController {
         Course.updateOne({ _id: req.params.id }, req.body)
             .then(() => res.redirect('/me/stored/courses'))
             .catch(next)
+    }
+    
+    // [DELETE] /courses/:id
+    delete(req, res, next) {
+        Course.deleteOne({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
     }
 }
 
